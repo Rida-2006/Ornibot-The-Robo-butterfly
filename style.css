@@ -259,9 +259,8 @@ p{
   border-radius: 10px;
 }
 
-
 #page2part2 {
-    min-height: 620vh;
+    min-height: 560vh;
     background-color: whitesmoke;
     width: 100%;
     position: relative;
@@ -272,13 +271,24 @@ p{
     color: #222;
     line-height: 1.8;
 }
-
-#page2part2 img {
-    max-width: 90%;
-    height: auto;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+.image-box {
+    display: flex;
+    justify-content: center; /* Center image horizontally */
+    align-items: center;     /* Center image vertically */
+    background-color: white; /* Box background color */
+    border-radius: 12px;     /* Rounded corners */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2); /* Soft shadow */
+    padding: 20px;
+    max-width: 500px; /* Max size of box */
+    margin: 0 auto; /* Centers box in the page */
 }
+
+.image-box img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
 
 #solidworkswing,
 #solidworksengine {
@@ -398,7 +408,7 @@ p{
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 #foot{
-    min-height: 250vh;
+    min-height: 200vh;
     margin-bottom: 200px;
     display: flex;
     justify-content: center;
@@ -718,7 +728,10 @@ p{
         padding-left: 2rem; /* Less padding for small screens */
         padding-right: 2rem;
     }
-
+    .image-box {
+        max-width: 90%;  /* Use most of screen width */
+        padding: 15px;   /* Slightly smaller padding */
+    }
     #solidworkswing video,
     #solidworksengine video {
         max-width: 100%; /* Fill available space */
