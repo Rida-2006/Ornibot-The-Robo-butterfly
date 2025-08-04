@@ -13,21 +13,35 @@ html, body{
     height: 100%;
     width: 100%;
 }
+
+
+
+
+
+p {
+  font-size: 1rem; /* ~16px */
+  line-height: 1.6;
+}
+
 h1{
     color: rgb(43, 6, 62);
-    font-size: 3rem; 
+    font-size: 4rem; 
+    font-weight: bold;
 }
 h2{
     color: rgb(147, 75, 145);
     font-size: 2.5rem;
+    font-weight: bold;
 }
 h3{
    color:#28252a; 
-   font-size: 1.75rem;
+   font-weight: semi-bold;
+   font-size: 2rem;
 }
 h4{
     color:#222;
-    font-size: 1.25rem;
+    font-weight: semi-bold;
+    font-size: 2rem;
 }
 p{
      line-height: 1.8;
@@ -54,7 +68,6 @@ p{
     text-decoration: none;
     color: black;
     margin: 3px;
-    font-family: Arial, Helvetica, sans-serif;
 }
 #nav img{
     width: 100px;
@@ -140,9 +153,6 @@ p{
   object-fit: cover;
 
 }
-
-
-
 #page2 {
     min-height: 150vh;
     width: 100%;
@@ -174,7 +184,7 @@ p{
     object-fit: cover;
     scale:1.1;
 }
- #page2 .elem .dets{
+ #page2 .elem .dets {
     height: 50px;
     border-radius: 50px;
     width: 76%;
@@ -182,20 +192,22 @@ p{
     background-color: #d3b1c2;
     z-index: 9;
     opacity: 0.8;
-} 
+    display: flex;                  /* Add flexbox */
+    align-items: center;           /* Vertically center */
+    justify-content: center;       /* Horizontally center */
+    padding: 0 20px;               /* Optional: for spacing inside */
+}
 
 .icon {
-    width: 30px;
-  display: flex;
-  gap: 30px;
-  font-size: 24px;
-  color: #170219; /* lavender tone */
-  transition: transform 0.3s ease;
-  align-items: center;
-    justify-content: flex-start;
-    margin: 10px;
+    display: flex;
+    align-items: center;
+    gap: 15px;                      /* Smaller gap looks better centered */
+    font-size: 24px;
+    color: #170219;
+    transition: transform 0.3s ease;
     font-family: Arial, Helvetica, sans-serif;
     
+    margin: 0;                      /* Remove extra spacing */
 }
 
 #page2part1{
@@ -287,36 +299,28 @@ p{
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
-#solidworkswing {
+
+
+
+
+#solidworkswing, #solidworksengine {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100vw;
     height: 100vh;
-    margin-left: 0;
-}
-#solidworkswing video 
-{
-    width: 700px;     /* or 300px if you prefer smaller */
-    height: auto;
-    border-radius: 12px; /* optional: gives smooth edges */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* optional styling */
-}
-#solidworksengine {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
-    height: 100vh;
-    margin-left: 0;
+    margin: 0; /* Remove conflicting margins */
+    padding: 0; /* Optional */
 }
 
+#solidworkswing video,
 #solidworksengine video {
-    width: 700px;     /* or 300px if you prefer smaller */
+    width: 700px;
     height: auto;
-    border-radius: 12px; /* optional: gives smooth edges */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* optional styling */
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
+
 #page3 {
     min-height: 220vh;
     background-color:rgb(234, 224, 233) ;
@@ -535,22 +539,52 @@ p{
     justify-content: center;
 }
 
-#video-container2 video{
-    /* margin-top: 4vh ; */
-    height: 60vh;
-    width: 160vh;
-    padding-left: 17vh;
-    
-    object-fit: cover;
-    position: relative;
-    margin-top: 1vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-} 
+#page5 {
+  text-align: center;
+  padding: 40px 20px;
+  color: #222;
+}
 
+/* Center #video-container2 horizontally */
+#video-container2 {
+  margin: 0 auto;           /* centers block element horizontally */
+  width: 80vw;
+  max-width: 800px;
+  height: 45vw;             /* maintain aspect ratio */
+  max-height: 450px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  overflow: hidden;
+}
 
-@media (max-width: 600px){
+/* Make video fill container responsively */
+#video-container2 video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 12px;
+}
+@media (max-width: 800px){
+  body {
+    font-size: 20px;
+  }
+   h1 {
+    font-size: 2.5rem;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+  h3, h4 {
+    font-size: 1.5rem;
+  }
+  p {
+    font-size: 0.95rem; /* ~15px */
+    line-height: 1.6;
+  }
+  #cursor {
+    display: none;
+  }
     
   #nav {
     flex-direction: column;
@@ -583,26 +617,40 @@ p{
     margin-bottom: 10px;
   }
 
-    #page1{
+#page1{
     width: 100%;
-    min-height: 50vh;
+    min-height: 60vh;
     padding-top: 8vh;
     padding-left: 2vh;
     padding-right: 2vh;
+    padding-bottom: 4vh;
     
 }
-    #page1 h1{
-    font-size: 8vw;
+#page1 h1{
+    font-size: 13vw;
     letter-spacing: -3px;
-    line-height: 9vw;
+    line-height: 12vw;
 }
-#video-container{
-    height: 100vh;
-    margin-top: 2vw;
+#video-container {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%; /* 16:9 aspect ratio (9 / 16 = 0.5625) */
+    overflow: hidden;
+}
+#video-container video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 #page1part1 {
   min-height: 100vh;
-  padding: 5vh 5vw;
+  padding-left: 2vh;
+  padding-right: 2vh;
+  padding-top: 5vh;
+  padding-bottom: 5vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -610,11 +658,12 @@ p{
 
 #page1part1 #textcontainer {
   min-height: 70vh;
-  background-color: whitesmoke;
   width: 100%;
   max-width: 900px;
   position: relative;
-  padding: 5vh 5vw;
+  padding-left: 2vh;
+  padding-right: 2vh;
+  padding-top: 5vh;
   box-sizing: border-box;
   border-radius: 12px;
 }
@@ -644,15 +693,12 @@ p{
     min-height: 100vh;
     width: 100%;
     padding-top: 3vh;
-    padding-left: 2vh;
-    padding-right: 2vh;
     flex-direction: column;
-    gap: 2vw;
+    gap: 4vw;
     padding-bottom: 4vh;
 }
 
 #page2 .elem {
-    height: 100vh;
     width: 100%;
     align-items: center;
     justify-content: center;
@@ -666,34 +712,62 @@ p{
 #page2 .elem .dets{
     height: 40px;
     border-radius: 50px;
-    width: 65%;
+    width: 266px;
 }  
 
-#page2part1{
-    padding-left: 10vh;
-    padding-right: 10vh;
-}
-#orniimg,
-#engineimg {
-  display: flex;
-  justify-content: center;    /* center horizontally */
-  align-items: center;        /* center vertically if height is constrained */
-  width: 100%;                /* take full width */
-  padding: 2vh 0;
-  margin: 0 auto;
-}
 
-#orniimg img,
-#engineimg img {
-  width: 80vw;                /* responsive width */
-  max-width: 250px;           /* limit max size */
-  height: auto;               /* maintain aspect ratio */
-  object-fit: cover;
-  border-radius: 10px;
-}
+#page2part1 {
+    padding-left: 3.5vh;
+    padding-right: 2vh;
+    padding-bottom: 2vh;
+    padding-top: 15vh;
+  }
+
+  #orniimg,
+  #engineimg {
+    width: 90vw;
+    height: auto;
+    padding: 2vh;
+    margin: 2vh auto; /* centers the image blocks */
+    flex-direction: column;
+  }
+
+  #orniimg img,
+  #engineimg img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+  }
 #page2part2 {
+    padding-left: 4vh;
+  padding-right: 2vh;
+  padding-top: 5vh;
+  padding-bottom: 5vh;
     min-height: 500vh;
 }
+#page2part2 img {
+    width: 90vw;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+
+ #solidworkswing,
+  #solidworksengine {
+    flex-direction: column;
+    width: 100vw;
+    height: auto;
+    padding: 4vh 0;
+  }
+
+  #solidworkswing video,
+  #solidworksengine video {
+    width: 90vw;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
 #page3 {
     padding: 6vh 5vw;
   }
@@ -748,22 +822,67 @@ p{
     width: 100%;
     height: auto;
   }
-  #foot{
-    min-height: 100vh;
-    margin-bottom: 20px;
+   #foot {
+        min-height: 100px;
+        margin-bottom: 50px;
+        padding: 15px;
+    }
     
-}
+    .container {
+        width: 100%;
+        padding: 15px;
+    }
+    
+    .commentbox {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .commentbox img {
+        margin: 0 auto 10px auto;
+        width: 60px;
+        height: 60px;
+    }
+    
+    .content {
+        flex: none;
+        width: 100%;
+        margin-left: 0;
+    }
+    
+    .user {
+        margin-left: 0;
+        width: 100%;
+    }
+    
+    .buttons {
+        justify-content: center;
+    }
+    
+    .buttons button {
+        flex: none;
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    .notify {
+        justify-content: center;
+        margin: 10px 0 0 0;
+    }
  #page5 {
     min-height: 50vh;
     padding: 3vh 3vw;
    
   }
 
-  #video-container2 video {
+  #video-container2 {
     width: 95vw;
-    max-width: 100%;
     height: auto;
-    margin-top: 2vh;
+    max-height: none;
+  }
+  
+  #video-container2 video {
+    height: auto;
   }
   #page2part2 h2 {
     font-size: 1.8rem;
