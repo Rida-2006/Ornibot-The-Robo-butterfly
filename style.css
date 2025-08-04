@@ -13,11 +13,6 @@ html, body{
     height: 100%;
     width: 100%;
 }
-
-
-
-
-
 p {
   font-size: 1rem; /* ~16px */
   line-height: 1.6;
@@ -119,7 +114,6 @@ p{
     background-color: whitesmoke;
     width: 100%;
     position: relative;
-    padding-top: 5vh;
     padding-left: 5vh;
     padding-right: 5vh;
 }
@@ -133,7 +127,7 @@ p{
     padding-right: 80vh;
 }
 #image-container {
-    background-color: #c9aebb;
+  background-color: #c9aebb;
   display: flex;
   gap: 20px; /* Space between the images */
   border-radius: 20px;
@@ -156,7 +150,7 @@ p{
 #page2 {
     min-height: 150vh;
     width: 100%;
-    padding-top: 10vh;
+    padding-top: 2vh;
     padding-left: 5vh;
     padding-right: 5vh;
     background-color: rgb(234, 224, 233);
@@ -423,7 +417,7 @@ p{
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 #foot{
-    min-height: 200vh;
+    min-height: 250vh;
     margin-bottom: 200px;
     display: flex;
     justify-content: center;
@@ -805,6 +799,7 @@ p{
     text-align: center;
   }
 #page4 {
+  min-height: 150vh;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
@@ -822,52 +817,57 @@ p{
     width: 100%;
     height: auto;
   }
-   #foot {
-        min-height: 100px;
-        margin-bottom: 50px;
-        padding: 15px;
+  #foot {
+        min-height: auto; /* Remove extra height */
+        margin-bottom: 50px; /* Small space below */
+        padding: 20px 0;
     }
-    
+
     .container {
-        width: 100%;
+        width: 95%;
         padding: 15px;
     }
-    
+
+    .head {
+        font-size: 1rem;
+        margin-bottom: 15px;
+    }
+
+    .text {
+        font-size: 0.8rem;
+    }
+
     .commentbox {
         flex-direction: column;
-        align-items: stretch;
+        align-items: flex-start;
     }
-    
+
     .commentbox img {
-        margin: 0 auto 10px auto;
-        width: 60px;
-        height: 60px;
+        width: 40px;
+        height: 40px;
+        margin-bottom: 8px;
+        margin-right: 0;
     }
-    
-    .content {
-        flex: none;
+
+    .commentinput input {
         width: 100%;
-        margin-left: 0;
+        font-size: 0.85rem;
     }
-    
-    .user {
-        margin-left: 0;
-        width: 100%;
-    }
-    
+
     .buttons {
-        justify-content: center;
+        flex-direction: column;
+        gap: 8px;
     }
-    
+
     .buttons button {
-        flex: none;
         width: 100%;
-        max-width: 300px;
+        font-size: 0.8rem;
+        padding: 8px;
     }
-    
-    .notify {
-        justify-content: center;
-        margin: 10px 0 0 0;
+
+    .policy {
+        font-size: 0.7rem;
+        text-align: center;
     }
  #page5 {
     min-height: 50vh;
